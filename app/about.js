@@ -1,0 +1,1 @@
+export default function About(){ return (<div className='max-w-4xl mx-auto p-8'><h1 className='text-2xl font-bold'>About</h1><p className='mt-3'>Open Road Exchange - specialize in RVs, Trucks & Trailers.</p></div>)}
