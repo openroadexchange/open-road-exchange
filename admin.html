@@ -1,56 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Admin | Open Road Exchange</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Admin Panel • Open Road Exchange</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="admin.js" defer></script>
 </head>
+
 <body>
-<h1>Open Road Exchange – Admin Panel</h1>
 
-<div id="loginSection">
-  <h2>Admin Login</h2>
-  <input id="loginUser" placeholder="Username">
-  <input id="loginPass" type="password" placeholder="Password">
-  <button id="loginBtn">Login</button>
-  <p id="loginError" class="error-text"></p>
+<header>
+  <img src="logo.png" alt="Open Road Exchange" class="logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="finance.html">Financing</a>
+    <a href="tradein.html">Trade-In</a>
+    <a href="service.html">Service & Warranty</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<div class="main-wrapper">
+
+  <section class="hero">
+    <h1>Admin Panel</h1>
+    <p>Manage inventory, pricing, descriptions, categories, and status.  
+    This page is connected to <code>admin.js</code> and can be upgraded to full database integration.</p>
+  </section>
+
+  <section class="form-card">
+    <h2>Inventory Management (Placeholder)</h2>
+
+    <p>This section will allow you to:</p>
+
+    <ul>
+      <li>Add new units (RV, Truck, Trailer, Misc)</li>
+      <li>Edit existing units</li>
+      <li>Upload photos</li>
+      <li>Update pricing & availability</li>
+      <li>Remove sold units</li>
+    </ul>
+
+    <p><strong>Your Next Step:</strong>  
+    When you're ready, I can build your **full admin database system** (Supabase or Firebase) and link it here.</p>
+
+    <p style="margin-top:16px;color:#777;">
+      This is a placeholder — no submissions are processed.
+    </p>
+  </section>
+
 </div>
 
-<div id="adminSection" style="display:none;">
-  <h2>Inventory Management</h2>
-  <p id="roleDisplay"></p>
-
-  <form id="vehicleForm">
-    <input type="hidden" id="vehicleId">
-    <label>Title <input id="title"></label>
-    <label>Type <select id="type">
-      <option value="rv">RV</option>
-      <option value="truck">Truck</option>
-      <option value="trailer">Trailer</option>
-    </select></label>
-    <label>Year <input id="year"></label>
-    <label>Price <input id="price"></label>
-    <label>Mileage <input id="mileage"></label>
-    <label>Stock # <input id="stock"></label>
-    <label>Status <select id="status">
-      <option value="available">Available</option>
-      <option value="sale_pending">Sale Pending</option>
-      <option value="sold">Sold</option>
-    </select></label>
-    <label>Image URL <input id="image"></label>
-    <label>Description <textarea id="description"></textarea></label>
-    <button id="saveBtn" type="submit">Save</button>
-    <button id="resetBtn" type="button">Clear</button>
-  </form>
-
-  <h3>Current Inventory</h3>
-  <table border="1">
-    <thead><tr><th>Title</th><th>Type</th><th>Year</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead>
-    <tbody id="inventoryTableBody"></tbody>
-  </table>
+<div class="footer">
+  © 2025 Open Road Exchange — RV • Truck • Trailer • Misc
 </div>
 
-<script src="admin.js"></script>
 </body>
 </html>
